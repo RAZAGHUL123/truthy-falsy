@@ -1,12 +1,8 @@
 function checkValue() {
-	// Get the input value
-	var value = document.getElementById("input").value;
+	const value = document.getElementById("input").value;
+	const result = document.getElementById("result");
 	
-	// Check if the value is truthy or falsy
-	if (value){
-		document.getElementById("result").innerHTML = value + " is truthy!";
-	} else {
-		document.getElementById("result").innerHTML = value + " is falsy!";
-        document.getElementById("result").style.color = "red";
-	}
-}
+	result.innerHTML = value ? `${value} is truthy!` : `${value} is falsy!`;
+	result.style.color = value == false ? "red" : "black";
+  }
+  
